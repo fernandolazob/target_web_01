@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Panel</title>
+    <title>Credenciales</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,32 +13,101 @@
     <a href="links_extra.html">Otros links</a>
 </div>
 
-<h1>Panel General</h1>
+<h1>Credenciales</h1>
 
 <table>
+<thead>
 <tr>
     <th>Nombre</th>
-    <th>Vista</th>
-    <th>Campaña</th>
+    <th>Acceso</th>
+    <th>Credenciales</th>
 </tr>
+</thead>
+
+<tbody>
 
 <tr>
     <td>Efectiva Negocios</td>
-
     <td>
         <a class="btn btn-agentes"
-        href="http://192.168.3.64/vicidial/realtime_report.php?group=139"
-        target="_blank">Ver</a>
+        href="http://74929433:GNOMO256@192.168.3.64/vicidial/realtime_report.php?group=139"
+        target="_blank">Entrar</a>
     </td>
-
     <td>
-        <a class="btn btn-campana"
-        href="http://192.168.3.64/vicidial/admin.php?campaign_id=139"
-        target="_blank">Ver</a>
+        <button class="btn btn-copy" onclick="copiar('74929433', this)">👤 74929433</button>
+        <button class="btn btn-copy" onclick="copiar('GNOMO256', this)">🔑 GNOMO256</button>
     </td>
 </tr>
 
+<tr>
+    <td>Efectiva Consumo</td>
+    <td>
+        <a class="btn btn-agentes"
+        href="http://77673403:JCASIMIRO@192.168.3.7/vicidial/realtime_report.php?group=124"
+        target="_blank">Entrar</a>
+    </td>
+    <td>
+        <button class="btn btn-copy" onclick="copiar('77673403', this)">👤 77673403</button>
+        <button class="btn btn-copy" onclick="copiar('JCASIMIRO', this)">🔑 JCASIMIRO</button>
+    </td>
+</tr>
+
+<tr>
+    <td>Cencosud (general)</td>
+    <td>
+        <a class="btn btn-agentes"
+        href="http://6666:admin1234@192.168.3.76/vicidial/realtime_report.php"
+        target="_blank">Entrar</a>
+    </td>
+    <td>
+        <button class="btn btn-copy" onclick="copiar('6666', this)">👤 6666</button>
+        <button class="btn btn-copy" onclick="copiar('admin1234', this)">🔑 admin1234</button>
+    </td>
+</tr>
+
+<tr>
+    <td>Dinner TC</td>
+    <td>
+        <a class="btn btn-agentes"
+        href="http://6666:admin1234@192.168.3.21/vicidial/realtime_report.php"
+        target="_blank">Entrar</a>
+    </td>
+    <td>
+        <button class="btn btn-copy" onclick="copiar('6666', this)">👤 6666</button>
+        <button class="btn btn-copy" onclick="copiar('admin1234', this)">🔑 admin1234</button>
+    </td>
+</tr>
+
+<tr>
+    <td>IVR</td>
+    <td>
+        <a class="btn btn-agentes"
+        href="http://admin_ivr:TARGET1234@192.168.3.40/vicidial/realtime_report.php"
+        target="_blank">Entrar</a>
+    </td>
+    <td>
+        <button class="btn btn-copy" onclick="copiar('admin_ivr', this)">👤 admin_ivr</button>
+        <button class="btn btn-copy" onclick="copiar('TARGET1234', this)">🔑 TARGET1234</button>
+    </td>
+</tr>
+
+</tbody>
 </table>
+
+<script>
+function copiar(texto, boton) {
+    navigator.clipboard.writeText(texto);
+
+    let original = boton.innerText;
+    boton.innerText = "✔ Copiado";
+    boton.style.backgroundColor = "#2ecc71";
+
+    setTimeout(() => {
+        boton.innerText = original;
+        boton.style.backgroundColor = "#e67e22";
+    }, 1200);
+}
+</script>
 
 </body>
 </html>
