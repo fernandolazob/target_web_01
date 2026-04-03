@@ -1,10 +1,18 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f6f9;
-    margin: 0;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 .header {
     display: flex;
     justify-content: space-between;
@@ -14,33 +22,49 @@ body {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+.header h1 {
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .nav a {
-    margin-left: 20px;
     text-decoration: none;
     color: #2c3e50;
     font-weight: bold;
+    font-size: 14px;
 }
 
-/* CONTENEDOR FLEX */
+/* =========================
+   CONTENEDOR (GRID FLEX)
+========================= */
 .container {
     display: flex;
-    flex-wrap: wrap; /* 🔥 clave */
+    flex-wrap: wrap;
     gap: 20px;
     padding: 30px;
+    justify-content: center;
 }
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
 .card {
     background: white;
-    width: 250px; /* 🔥 tamaño fijo para grid horizontal */
+    width: 280px;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: 0.2s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
     position: relative;
+    transition: all 0.25s ease;
 }
 
-/* 🔥 línea vertical elegante */
+/* línea lateral */
 .card::before {
     content: "";
     position: absolute;
@@ -53,86 +77,23 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 .card h2 {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 15px;
-}
-
-/* BOTONES */
-.acciones {
-    display: flex;
-    gap: 10px;
-}
-
-.btn {
-    padding: 8px 12px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 13px;
-    color: white;
-    font-weight: bold;
-}
-
-.btn-agentes {
-    background-color: #3498db;
-}
-
-.btn-campana {
-    background-color: #27ae60;
-}
-
-.btn:hover {
-    opacity: 0.85;
-}
-
-
-.container {
-    justify-content: center;
-}
-
-.container {
-    justify-content: center;
-}
-
-
-.card {
-    width: 280px;
-}
-
-.card {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
-    margin: 0;
-}
-
-/* HEADER */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.nav a {
-    margin-left: 20px;
-    text-decoration: none;
     color: #2c3e50;
-    font-weight: bold;
 }
 
-/* SECCIONES */
+/* =========================
+   SECCIONES (links_extra)
+========================= */
 .titulo-seccion {
-    margin: 30px 30px 10px;
-    font-size: 18px;
+    width: 100%;
+    margin: 20px 30px 5px;
+    font-size: 16px;
     color: #2c3e50;
     border-left: 5px solid #3498db;
     padding-left: 10px;
@@ -142,61 +103,50 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 0 30px 20px;
+    padding: 10px 30px 20px;
 }
 
-/* CARD */
-.card {
-    background: white;
-    width: 260px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    position: relative;
-    transition: 0.2s;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 5px;
-    background: linear-gradient(180deg, #3498db, #27ae60);
-    border-radius: 12px 0 0 12px;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* BOTONES */
+/* =========================
+   BOTONES
+========================= */
 .acciones {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
+/* base */
 .btn {
     padding: 8px 12px;
     border-radius: 6px;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
     color: white;
     font-weight: bold;
     border: none;
     cursor: pointer;
+    transition: 0.2s;
 }
 
-.btn-copy {
-    background-color: #e67e22;
+/* tipos */
+.btn-agentes {
+    background-color: #3498db;
+}
+
+.btn-campana {
+    background-color: #27ae60;
 }
 
 .btn-link {
     background-color: #34495e;
 }
 
+.btn-copy {
+    background-color: #e67e22;
+}
+
+/* hover */
 .btn:hover {
     opacity: 0.85;
+    transform: scale(1.05);
 }

@@ -2,80 +2,145 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Links Extra</title>
+    <title>Credenciales</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="header">
-    <h1>Links Importantes</h1>
+    <h1>+ links</h1>
 
     <div class="nav">
         <a href="index.html">Panel</a>
-        <a href="credenciales.html">Credenciales</a>
-        <a href="links_extra.html">Otros links</a>
+        <a href="links_extra.html">+ links</a>
+        <a class="btn btn-link" href="http://192.168.3.76/vicidial/welcome.php" target="_blank">🔗 Asistencia</a>
     </div>
 </div>
 
 <div class="container">
+    
+    <h2 class="titulo-seccion">🖥️ Servidores SQL</h2>
+    <section class="seccion">
+        <div class="card">
+            <h2> SQL | 192.168.2.50</h2>
+            <div class="acciones">
+                <button class="btn btn-copy" onclick="copiar('192.168.2.50')">🖥️ servidor</button>
+                <button class="btn btn-copy" onclick="copiar('sa')">👤 Usuario</button>
+                <button class="btn btn-copy" onclick="copiar('target2023$')">🔑 Password</button>
+            </div>
+        </div>
+            
+        <div class="card">
+            <h2> SQL | 192.168.2.12</h2>
+            <div class="acciones">
+                <button class="btn btn-copy" onclick="copiar('192.168.2.12')">🖥️ servidor</button>
+                <button class="btn btn-copy" onclick="copiar('Zeus')">👤 Usuario</button>
+                <button class="btn btn-copy" onclick="copiar('target12345')">🔑 Password</button>
+            </div>
+        </div>
+            
+        <div class="card">
+            <h2> SQL | 192.168.2.15</h2>
+            <div class="acciones">
+                <button class="btn btn-copy" onclick="copiar('192.168.2.15')">🖥️ servidor</button>
+                <button class="btn btn-copy" onclick="copiar('kishin')">👤 Usuario</button>
+                <button class="btn btn-copy" onclick="copiar('Leto0891.1')">🔑 Password</button>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-    <h2>CRM</h2>
-    <div class="acciones">
-        <a class="btn btn-bi" href="http://192.168.3.81/sys_target/" target="_blank">Abrir</a>
-    </div>
+    <h2 class="titulo-seccion">📞 Vicidial</h2>
+    <section class="seccion">
+        <div class="card">
+            <h2>192.168.3.64 | Efectiva Negocios</h2>
+            <div class="acciones">
+                <a class="btn btn-link" href="http://192.168.3.64/vicidial/welcome.php" target="_blank">🔗 Abrir</a>
+                <button class="btn btn-copy" onclick="copiar('74929433')">👤 Usuario</button>
+                <button class="btn btn-copy" onclick="copiar('GNOMO256')">🔑 Password</button>
+            </div>
+        </div>
+        <div class="card">
+            <h2>192.168.3.7 | Efectiva Consumo</h2>
+            <div class="acciones">
+                <a class="btn btn-link" href="http://192.168.3.7/vicidial/welcome.php" target="_blank">🔗 Abrir</a>
+                <button class="btn btn-copy" onclick="copiar('77673403')">👤 Usuario</button>
+                <button class="btn btn-copy" onclick="copiar('JCASIMIRO')">🔑 Password</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>192.168.3.76 | Cencosud : SAE SAR TC AGENDA</h2>
+            <div class="acciones">
+                <a class="btn btn-link" href="http://192.168.3.76/vicidial/welcome.php" target="_blank">🔗 Abrir</a>
+                <button class="btn btn-copy" onclick="copiar('6666')">👤 Usuario</button>
+                <button class="btn btn-copy" onclick="copiar('admin1234')">🔑 Password</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>192.168.3.21 | Dinner TC</h2>
+            <div class="acciones">
+                <a class="btn btn-link" href="http://192.168.3.21/vicidial/welcome.php" target="_blank">🔗 Abrir</a>
+                <button class="btn btn-copy" onclick="copiar('6666')">👤 Usuario</button>
+                <button class="btn btn-copy" onclick="copiar('Admin1234')">🔑 Password</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>192.168.3.40 | IVR</h2>
+            <div class="acciones">
+                <a class="btn btn-link" href="http://192.168.3.40/vicidial/welcome.php" target="_blank">🔗 Abrir</a>
+                <button class="btn btn-copy" onclick="copiar('admin_ivr')">👤 Usuario</button>
+                <button class="btn btn-copy" onclick="copiar('TARGET1234')">🔑 Password</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>CRM | valentina</h2>
+            <div class="acciones">
+                <a class="btn btn-link" href="https://crm.target.mastermold.dev/intranet/login.php?accesscheck=%2Fintranet%2Ftelemarketing%2Falfin%2Fventas.php" target="_blank">🔗 Abrir</a>
+            </div>
+        </div>
+
+    </section>
+
+    <h2 class="titulo-seccion">📊 CRM / BI's</h2>
+    <section class="seccion">
+        <div class="card">
+            <h2> CRM | Ventas</h2>
+            <div class="acciones">
+                <a class="btn btn-link" href="http://192.168.3.81/sys_target/" target="_blank">🔗 Abrir</a>
+                <button class="btn btn-copy" onclick="copiar('fgutierrez')">👤 Usuario</button>
+                <button class="btn btn-copy" onclick="copiar('12345')">🔑 Password</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2> BI | Otras campañas</h2>
+            <div class="acciones">
+                <a class="btn btn-link" href="http://192.168.2.100/Emi/" target="_blank">🔗 Abrir</a>
+                <button class="btn btn-copy" onclick="copiar('73040914')">👤 Usuario</button>
+                <button class="btn btn-copy" onclick="copiar('73040914')">🔑 Password</button>
+            </div>
+        </div>
+    </section>
+
 </div>
 
-<div class="card">
-    <h2>BI alfin</h2>
-    <div class="acciones">
-        <a class="btn btn-bi" href="https://crm.target.mastermold.dev/intranet/telemarketing/alfin/bi.php" target="_blank">Abrir</a>
-    </div>
-</div>
-
-<div class="card">
-    <h2>BI credicash</h2>
-    <div class="acciones">
-        <a class="btn btn-bi" href="https://crm.target.mastermold.dev/intranet/telemarketing/alfcc/bi.php" target="_blank">Abrir</a>
-    </div>
-</div>
-
-<div class="card">
-    <h2>BI efectiva negocios</h2>
-    <div class="acciones">
-        <a class="btn btn-bi" href="eyJrIjoiMWJhNThkNjgtY2I0Mi00YTBhLWI4ZDktZWM5YzZkMjBjMjlmIiwidCI6Ijk4YzkzYjBjLTAwMmItNDVlYi1iMTA5LWYyYzVmMmMxZDEzMCJ9" target="_blank">Abrir</a>
-    </div>
-</div>
-
-<div class="card">
-    <h2>BI efectiva consumo</h2>
-    <div class="acciones">
-        <a class="btn btn-bi" href="https://app.powerbi.com/view?r=eyJrIjoiY2RlOTQ4NjQtNzFiNy00ZDQwLWEzOGMtNDA4NGM0YzAyNDcxIiwidCI6Ijk4YzkzYjBjLTAwMmItNDVlYi1iMTA5LWYyYzVmMmMxZDEzMCJ9" target="_blank">Abrir</a>
-    </div>
-</div>
-
-<div class="card">
-    <h2>BI Otras campañas</h2>
-    <div class="acciones">
-        <a class="btn btn-bi" href="http://192.168.2.100/Emi/Principal/v1/?q=MzM=" target="_blank">Abrir</a>
-    </div>
-</div>
-
-<div class="card">
-    <h2>BI Otras campañas</h2>
-    <div class="Ventas">
-        <a class="btn btn-bi" href="http://192.168.3.81/sys_target/" target="_blank">Abrir</a>
-    </div>
-</div>
-
-<div class="card">
-    <h2>Asistencia</h2>
-    <div class="acciones">
-        <a class="btn btn-campana" href="http://192.168.3.76/vicidial/welcome.php" target="_blank">Abrir</a>
-    </div>
-</div>
-
-</div>
+<script>
+function copiar(texto) {
+    navigator.clipboard.writeText(texto);
+    alert("Copiado: " + texto);
+}
+</script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
