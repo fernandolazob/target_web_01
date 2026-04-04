@@ -1,13 +1,15 @@
-function copiar(texto) {
+function copiar(texto, btn) {
     navigator.clipboard.writeText(texto);
 
-    const aviso = document.createElement("div");
-    aviso.innerText = "Copiado ✔";
-    aviso.className = "toast";
+    const textoOriginal = btn.innerHTML;
 
-    document.body.appendChild(aviso);
+    // cambiar texto
+    btn.innerHTML = "✔ Copiado";
+    btn.style.background = "#27ae60";
 
+    // volver a normal
     setTimeout(() => {
-        aviso.remove();
-    }, 1500);
+        btn.innerHTML = textoOriginal;
+        btn.style.background = "";
+    }, 1200);
 }

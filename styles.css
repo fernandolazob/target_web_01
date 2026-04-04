@@ -1,3 +1,6 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
 * {
     margin: 0;
     padding: 0;
@@ -5,93 +8,164 @@
 }
 
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background: #f4f6f9;
 }
 
+/* ========================= */
+/* LINKS (QUITAR SUBRAYADO) */
+/* ========================= */
+.btn-link,
+.btn-link:visited,
+.btn-link:hover,
+.btn-link:active {
+    text-decoration: none;
+    color: white;
+}
+
+/* ========================= */
 /* HEADER */
+/* ========================= */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
     background: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.header h1 {
+    font-size: 22px;
+    color: #2c3e50;
 }
 
 .nav {
     display: flex;
-    gap: 15px;
     align-items: center;
+    gap: 20px;
 }
 
 .nav a {
     text-decoration: none;
     color: #2c3e50;
-    font-weight: bold;
+    font-weight: 600;
+    transition: 0.2s;
 }
 
-/* BOTON ASISTENCIA */
+.nav a:hover {
+    color: #3498db;
+}
+
+/* ========================= */
+/* BOTÓN ASISTENCIA */
+/* ========================= */
 .btn-asistencia {
-    background: #34495e;
-    padding: 8px 14px;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #6366f1, #3b82f6);
     color: white !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 10px rgba(59,130,246,0.3);
+    transition: all 0.25s ease;
 }
 
+.btn-asistencia:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(59,130,246,0.4);
+}
+
+/* ========================= */
 /* BLOQUES */
+/* ========================= */
 .bloque {
-    margin-top: 25px;
+    background: #ffffff;
+    margin: 30px 40px;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    border: 1px solid #e5e7eb;
 }
 
+/* 🔥 Línea superior (AHORA BIEN) */
+.bloque::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%; /* 🔥 corregido */
+    background: linear-gradient(90deg, #3498db, #27ae60);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* ========================= */
 /* TITULOS */
+/* ========================= */
 .titulo-seccion {
-    margin: 20px 40px 10px;
     font-size: 16px;
-    border-left: 5px solid #3498db;
-    padding-left: 10px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
+/* ========================= */
 /* GRID */
+/* ========================= */
 .seccion {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 0 40px;
 }
 
+/* ========================= */
 /* CARD */
+/* ========================= */
 .card {
     background: white;
     width: 260px;
-    padding: 20px;
+    flex: 0 0 260px;
+
+    padding: 18px;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     position: relative;
-    transition: 0.25s;
+    transition: all 0.25s ease;
 }
 
+/* línea lateral */
 .card::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
-    width: 5px;
+    width: 4px;
     height: 100%;
-    background: linear-gradient(#3498db, #27ae60);
+    background: linear-gradient(180deg, #3498db, #27ae60);
     border-radius: 12px 0 0 12px;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 .card h2 {
     font-size: 15px;
     margin-bottom: 12px;
+    color: #2c3e50;
 }
 
+/* ========================= */
 /* BOTONES */
+/* ========================= */
 .acciones {
     display: flex;
     flex-wrap: wrap;
@@ -99,14 +173,20 @@ body {
 }
 
 .btn {
-    padding: 6px 10px;
+    padding: 7px 12px;
     border-radius: 6px;
     font-size: 12px;
     color: white;
     border: none;
     cursor: pointer;
+    transition: 0.2s;
 }
 
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* tipos */
 .btn-link {
     background: #34495e;
 }
@@ -115,18 +195,57 @@ body {
     background: #e67e22;
 }
 
-.btn:hover {
-    opacity: 0.85;
+.btn-agentes {
+    background: #3498db;
 }
 
+.btn-campana {
+    background: #27ae60;
+}
+
+/* ========================= */
+/* TOAST (COPIADO ✔) */
+/* ========================= */
 .toast {
     position: fixed;
     bottom: 20px;
     right: 20px;
+
     background: #27ae60;
     color: white;
+
     padding: 10px 15px;
     border-radius: 8px;
     font-size: 13px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .seccion {
+        justify-content: center;
+    }
 }
