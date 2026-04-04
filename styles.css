@@ -1,6 +1,12 @@
-/* ========================= */
+.btn-link,
+.btn-link:visited,
+.btn-link:hover,
+.btn-link:active {
+    text-decoration: none;
+    color: white;
+}
+
 /* RESET */
-/* ========================= */
 * {
     margin: 0;
     padding: 0;
@@ -10,17 +16,6 @@
 body {
     font-family: Arial, sans-serif;
     background: #f4f6f9;
-}
-
-/* ========================= */
-/* LINKS (QUITAR SUBRAYADO) */
-/* ========================= */
-.btn-link,
-.btn-link:visited,
-.btn-link:hover,
-.btn-link:active {
-    text-decoration: none;
-    color: white;
 }
 
 /* ========================= */
@@ -57,9 +52,7 @@ body {
     color: #3498db;
 }
 
-/* ========================= */
 /* BOTÓN ASISTENCIA */
-/* ========================= */
 .btn-asistencia {
     background: linear-gradient(135deg, #6366f1, #3b82f6);
     color: white !important;
@@ -80,31 +73,24 @@ body {
 }
 
 /* ========================= */
-/* BLOQUES */
+/* CONTENEDOR GENERAL */
+/* ========================= */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 40px;
+
+    justify-content: flex-start; /* 🔥 clave */
+}
+
+/* ========================= */
+/* SECCIONES */
 /* ========================= */
 .bloque {
-    background: #ffffff;
-    margin: 30px 40px;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-    border: 1px solid #e5e7eb;
+    margin-bottom: 30px;
 }
 
-/* 🔥 Línea superior (AHORA BIEN) */
-.bloque::before {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0%; /* 🔥 corregido */
-    background: linear-gradient(90deg, #3498db, #27ae60);
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-/* ========================= */
-/* TITULOS */
-/* ========================= */
 .titulo-seccion {
     font-size: 16px;
     font-weight: bold;
@@ -114,10 +100,13 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-}
 
+    /* ❌ eliminamos esto */
+    /* border-left: 4px solid #3498db; */
+    /* padding-left: 10px; */
+}
 /* ========================= */
-/* GRID */
+/* GRID FLEX */
 /* ========================= */
 .seccion {
     display: flex;
@@ -130,8 +119,8 @@ body {
 /* ========================= */
 .card {
     background: white;
-    width: 260px;
-    flex: 0 0 260px;
+    width: 260px; /* tamaño fijo */
+    flex: 0 0 260px; /* 🔥 evita que se estire raro */
 
     padding: 18px;
     border-radius: 12px;
@@ -140,7 +129,7 @@ body {
     transition: all 0.25s ease;
 }
 
-/* línea lateral */
+/* Línea lateral */
 .card::before {
     content: "";
     position: absolute;
@@ -186,7 +175,7 @@ body {
     opacity: 0.9;
 }
 
-/* tipos */
+/* BOTONES TIPOS */
 .btn-link {
     background: #34495e;
 }
@@ -204,38 +193,6 @@ body {
 }
 
 /* ========================= */
-/* TOAST (COPIADO ✔) */
-/* ========================= */
-.toast {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-
-    background: #27ae60;
-    color: white;
-
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 13px;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 9999;
-
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ========================= */
 /* RESPONSIVE */
 /* ========================= */
 @media (max-width: 768px) {
@@ -249,3 +206,40 @@ body {
         justify-content: center;
     }
 }
+
+
+/* ========================= */
+/* BLOQUES VISUALES */
+/* ========================= */
+.bloque {
+    background: #ffffff;
+    margin: 30px 40px;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    border: 1px solid #e5e7eb;
+}
+
+/* HEADER DE SECCIÓN */
+.titulo-seccion {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Línea decorativa arriba */
+.bloque::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0%; /* 🔥 ahora ocupa todo */
+    background: linear-gradient(90deg, #3498db, #27ae60);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
