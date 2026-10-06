@@ -1,0 +1,20 @@
+.venv/
+.venv_airflow/
+venv_airflow/
+venv/
+env/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Archivos temporales
+*.log
+
+
