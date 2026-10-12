@@ -161,7 +161,8 @@ body {
 }
 
 /* Mostrar contenido */
-#tab-efectiva:checked ~ .content .content-efectiva,
+#tab-efectivanegocios:checked ~ .content .content-efectivanegocios,
+#tab-efectivaconsumo:checked ~ .content .content-efectivaconsumo,
 #tab-alfin:checked ~ .content .content-alfin,
 #tab-cencosud:checked ~ .content .content-cencosud,
 #tab-diners:checked ~ .content .content-diners,
@@ -170,7 +171,8 @@ body {
 }
 
 /* Marcar pestaña activa */
-#tab-efectiva:checked ~ .sidebar label[for="tab-efectiva"],
+#tab-efectivaconsumo:checked ~ .sidebar label[for="tab-efectivaconsumo"],
+#tab-efectivanegocios:checked ~ .sidebar label[for="tab-efectivanegocios"],
 #tab-alfin:checked ~ .sidebar label[for="tab-alfin"],
 #tab-cencosud:checked ~ .sidebar label[for="tab-cencosud"],
 #tab-diners:checked ~ .sidebar label[for="tab-diners"],
