@@ -164,6 +164,7 @@ body {
 #tab-efectivanegocios:checked ~ .content .content-efectivanegocios,
 #tab-efectivaconsumo:checked ~ .content .content-efectivaconsumo,
 #tab-alfin:checked ~ .content .content-alfin,
+#tab-derrama:checked ~ .content .content-derrama,
 #tab-cencosud:checked ~ .content .content-cencosud,
 #tab-diners:checked ~ .content .content-diners,
 #tab-credicash:checked ~ .content .content-credicash {
@@ -174,6 +175,7 @@ body {
 #tab-efectivaconsumo:checked ~ .sidebar label[for="tab-efectivaconsumo"],
 #tab-efectivanegocios:checked ~ .sidebar label[for="tab-efectivanegocios"],
 #tab-alfin:checked ~ .sidebar label[for="tab-alfin"],
+#tab-derrama:checked ~ .sidebar label[for="tab-derrama"],
 #tab-cencosud:checked ~ .sidebar label[for="tab-cencosud"],
 #tab-diners:checked ~ .sidebar label[for="tab-diners"],
 #tab-credicash:checked ~ .sidebar label[for="tab-credicash"] {
